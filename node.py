@@ -21,12 +21,12 @@ class Node:
             self.data = data
 
     # print the tree
-    def printTree(self):
+    def print_tree(self):
         if self.left:
-            self.left.printTree()
+            self.left.print_tree()
         print(self.data),
         if self.right:
-            self.right.printTree()
+            self.right.print_tree()
 
 
 # Use the insert method to add nodes
@@ -35,4 +35,4 @@ root.insert(6)
 root.insert(14)
 root.insert(3)
 
-root.printTree()
+root.print_tree()
