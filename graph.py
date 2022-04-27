@@ -45,6 +45,7 @@ class graph:
     E = {ab, ac, bd, bc, de}
     """
 
+
 # Create the dictionary with graph elements
 graph_elements = {
     "a": ["b", "c"],
