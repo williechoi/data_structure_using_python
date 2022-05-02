@@ -28,11 +28,49 @@ class Node:
         if self.right:
             self.right.print_tree()
 
+    # Inorder traversal
+    # Left -> Root -> Right
+    def inorder_traversal(self, root):
+        res = []
+        if root:
+            res = self.inorder_traversal(root.left)
+            res.append(root.data)
+            res = res + self.inorder_traversal(root.right)
+
+        return res
+
+    # Preorder traversal
+    # Root -> Left -> Right
+    def preorder_traversal(self, root):
+        res = []
+        if root:
+            res.append(root.data)
+            res = res + self.preorder_traversal(root.left)
+            res = res + self.preorder_traversal(root.right)
+
+        return res
+
+    # Postorder traversal
+    # Left -> Right -> Root
+    def postorder_traversal(self, root):
+        res = []
+        if root:
+            res = self.postorder_traversal(root.left)
+            res = res + self.postorder_traversal(root.right)
+            res.append(root.data)
+
+        return res
+
 
 # Use the insert method to add nodes
-root = Node(12)
-root.insert(6)
+root = Node(27)
 root.insert(14)
-root.insert(3)
+root.insert(35)
+root.insert(10)
+root.insert(19)
+root.insert(31)
+root.insert(42)
 
-root.print_tree()
+print(root.inorder_traversal(root))
+print(root.preorder_traversal(root))
+print(root.postorder_traversal(root))
