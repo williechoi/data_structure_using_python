@@ -25,7 +25,6 @@ def intpolsearch(values, x):
     return "Searched element not in the list"
 
 
-
 l = [64, 34, 25, 12, 22, 11, 90]
 l2 = [2, 6, 11, 19, 27, 31, 45, 121]
 
