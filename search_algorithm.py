@@ -30,5 +30,4 @@ l2 = [2, 6, 11, 19, 27, 31, 45, 121]
 
 print(linear_search(l, 12))
 print(linear_search(l, 91))
-
 print(intpolsearch(l2, 9))
