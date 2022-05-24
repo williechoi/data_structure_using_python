@@ -39,3 +39,12 @@ except TypeError as err:
 arr2 = bytes((65+32, 66+32, 67+32, 68+32))
 
 print(arr2)
+
+# bytes (b'\xeb\x8c\x80\xed\x95\x9c\xeb\xaf\xbc\xea\xb5\xad') <=> utf8 (대한민국)
+hangul_utf_arr = bytes((0xEB, 0x8c, 0x80, 0xed, 0x95, 0x9c, 0xeb, 0xaf, 0xbc, 0xea, 0xb5, 0xad))
+print(hangul_utf_arr)
+print(hangul_utf_arr.decode('utf8'))
+
+eng_utf_arr = bytes((0x41, 0x70, 0x70, 0x6C, 0x65))
+print(eng_utf_arr)  # b'\x41\x70\x70\x6c\x65'
+print(eng_utf_arr.decode('utf8'))
