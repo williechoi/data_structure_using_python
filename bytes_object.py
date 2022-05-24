@@ -41,7 +41,9 @@ arr2 = bytes((65+32, 66+32, 67+32, 68+32))
 print(arr2)
 
 # bytes (b'\xeb\x8c\x80\xed\x95\x9c\xeb\xaf\xbc\xea\xb5\xad') <=> utf8 (대한민국)
-hangul_utf_arr = bytes((0xEB, 0x8c, 0x80, 0xed, 0x95, 0x9c, 0xeb, 0xaf, 0xbc, 0xea, 0xb5, 0xad))
+# 235 (Decimal) == 0xeb (HexDecimal) == 11101011 (Binary)
+# 235 140 128 (대) | 237 149 156 (한) | 235 175 188 (민) | 234 181 173 (국)
+hangul_utf_arr = bytes((0xeb, 0x8c, 0x80, 0xed, 0x95, 0x9c, 0xeb, 0xaf, 0xbc, 0xea, 0xb5, 0xad))
 print(hangul_utf_arr)
 print(hangul_utf_arr.decode('utf8'))
 
