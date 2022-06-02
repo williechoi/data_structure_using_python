@@ -40,3 +40,4 @@ print_array(array1)
 array2 = array('H', [4000, 10, 700, 22222])
 print(sum(array2))
 print(array2[1:3])
+
